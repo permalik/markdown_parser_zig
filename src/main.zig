@@ -27,22 +27,22 @@ pub fn main() !void {
     try read_line(f, arr);
 }
 
-pub fn read_line(f: std.fs.File, arr: std.ArrayListAligned(u8, null)) !void {
-    var buffered = std.io.bufferedReader(f.reader());
-    var reader = buffered.reader();
-
-    var line_count: usize = 0;
-    var byte_count: usize = 0;
-    while (true) {
-        reader.streamUntilDelimiter(*.arr.writer(), '\n', null) catch |err| switch (err) {
-            error.EndOfStream => break,
-            else => return err,
-        };
-
-        line_count += 1;
-        std.debug.print("line_number: {d}\n", .{line_count});
-        byte_count += *.arr.items.len;
-        *.arr.clearRetainingCapacity();
-    }
-    std.debug.print("{d} lines, {d} bytes", .{ line_count, byte_count });
-}
+// pub fn read_line(f: std.fs.File, arr: std.ArrayListAligned(u8, null)) !void {
+//     var buffered = std.io.bufferedReader(f.reader());
+//     var reader = buffered.reader();
+//
+//     var line_count: usize = 0;
+//     var byte_count: usize = 0;
+//     while (true) {
+//         reader.streamUntilDelimiter(*.arr.writer(), '\n', null) catch |err| switch (err) {
+//             error.EndOfStream => break,
+//             else => return err,
+//         };
+//
+//         line_count += 1;
+//         std.debug.print("line_number: {d}\n", .{line_count});
+//         byte_count += *.arr.items.len;
+//         *.arr.clearRetainingCapacity();
+//     }
+//     std.debug.print("{d} lines, {d} bytes", .{ line_count, byte_count });
+// }

@@ -1,31 +1,29 @@
-### Elements that Start at the Beginning of a Line
-- [x] Headings (#, ##, etc.)
-- [ ] Paragraphs (new blocks separated by blank lines)
-- [/] Line Breaks (two or more spaces at the end of a line)
-- [/] Unordered Lists (\*, +, or - at the start of a line)
-- [ ] Ordered Lists (1., 2., etc., at the start of a line)
-- [x] Blockquotes (>)
-- [ ] Code Blocks (triple backticks ```` or four-space indentation)
-- [x] Horizontal Rules (---, ***, or ___)
+## Block
+- [ ] Unordered Lists (\*, +, -)
+- [ ] Ordered Lists (1., 2., 3.)
+- [ ] Task Lists (- [ ] Task item)
+- [ ] Definition Lists (Term, followed by a new line : Definition)
+- [ ] Blockquotes (>)
+- [ ] Code Blocks (triple-backspace, four-space indentation)
 - [ ] Tables (using | for columns in a table row)
-- [ ] Footnotes (e.g., [^1]: Definition text)
-- [ ] Definition Lists (e.g., Term, followed by a new line : Definition)
-- [/] Task Lists (e.g., - [ ] Task item)
 
-### Elements that Start After an Indentation
-- [ ] Nested Unordered Lists (indented items under an unordered list)
-- [ ] Nested Ordered Lists (indented items under an ordered list)
-- [ ] Indented Code Blocks (code indented with four spaces or a tab)
-- [ ] Nested Blockquotes (blockquotes within blockquotes)
+## Line
+- [ ] Heading (#, ##, ###, ####, #####, ######)
+- [ ] Horizontal Rules (triple- hyphen, underscore, or asterisk)
+- [ ] Footnotes ([^1]: Definition text)
 
-### Inline Elements (Within a Given Line)
-- [ ] Bold (**bold** or __bold__)
-- [ ] Italic (*italic* or _italic_)
+## Inline
+- [ ] Bold (**bold**, __bold__)
+- [ ] Italic (*italic*, _italic_)
 - [ ] Bold and Italic (***bold italic***)
-- [ ] Inline Code (backticks around text, e.g., `code`)
+- [ ] Inline Code (`code`)
 - [ ] Links ([link text](URL "optional title"))
 - [ ] Images (![alt text](URL "optional title"))
 - [ ] Strikethrough (~~strikethrough~~)
-- [ ] Footnote References (e.g., [^1] inline in text)
-- [ ] HTML Elements (e.g., <div>content</div>)
+- [ ] Footnote References ([^1] Inline Text)
+- [ ] HTML Elements (<div>content</div>)
 - [ ] Comments (<!-- comment -->)
+
+## Separators
+- [ ] Line Breaks (two or more spaces at the end of a line)
+- [ ] Paragraph (line-separated text)
