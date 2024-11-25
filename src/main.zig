@@ -1,5 +1,7 @@
 const std = @import("std");
 
+const Markdown = enum { BlankLine };
+
 const Token = struct {
     name: []const u8,
     kind: []const u8,
@@ -32,6 +34,7 @@ pub fn main() !void {
 
         lc += 1;
         std.debug.print("line_number: {d}\n", .{lc});
-        l.clearRetainingCapacity();
     }
+
+    l.clearRetainingCapacity();
 }
