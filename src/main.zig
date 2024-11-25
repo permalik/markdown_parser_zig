@@ -24,6 +24,8 @@ pub fn main() !void {
 
     var l = std.ArrayList(u8).init(alc);
     defer l.deinit();
+    var ll = std.ArrayList([]u8).init(alc);
+    defer ll.deinit();
 
     var lc: usize = 0;
     while (true) {
@@ -34,7 +36,12 @@ pub fn main() !void {
 
         lc += 1;
         std.debug.print("line_number: {d}\n", .{lc});
+        try ll.append(l.items);
+        std.debug.print("{s}\n", .{l.items});
+        l.clearRetainingCapacity();
     }
 
-    l.clearRetainingCapacity();
+    // for (ll.items) |x| {
+    //     std.debug.print("{s}", .{x});
+    // }
 }
